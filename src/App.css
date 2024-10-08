@@ -1,0 +1,437 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f4f8;
+  height: auto;
+  /* overflow: hidden; */
+}
+
+.logout-button {
+  position: absolute;
+  right: 30px;
+  color: red;
+
+}
+
+/* Main background for the page */
+.register-container {
+  background-image: url('./images/login-illustration.png');
+  background-size: cover;
+  background-position: center;
+  /* Centers the image */
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: zoomIn 3s ease;
+  position: relative;
+  /* right: 60px; */
+  /* width: 100vw; */
+}
+
+/* Styling the registration form */
+.form-wrapper {
+  padding: 30px;
+  width: 450px;
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  animation: zoomIn 3s ease;
+  position: absolute;
+  right: 50px;
+}
+
+/* Form login */
+.form-login {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  animation: fadeInDown 2s ease;
+}
+
+
+
+
+.ui.button.blue:hover {
+  background-color: #0056b3;
+}
+
+.ui.button.red:hover {
+  background-color: #a00;
+}
+
+/* Form field styling */
+.ui.form .field input {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.ui .form {
+  animation: fadeInUp 2s ease;
+}
+
+/* Login link styling */
+.login-link {
+  color: #2185d0;
+  font-weight: bold;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .form-wrapper {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+
+.homepage-container {
+  text-align: center;
+  padding: 100px 20px;
+  background-color: #f9f9f9;
+}
+
+.homepage-title {
+  font-size: 3rem;
+  color: #333;
+  animation: fadeInDown 2s ease;
+}
+
+.homepage-description {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  animation: fadeInUp 2s ease;
+}
+
+.homepage-animation {
+  margin-top: 50px;
+  animation: zoomIn 3s ease;
+}
+
+.homepage-animation img {
+  max-width: 100%;
+  height: auto;
+  width: 500px;
+  object-fit: cover;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  .homepage-animation img {
+    width: 300px;
+  }
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Contact List Container Styling */
+.contact-list-container {
+  margin-top: 70px;
+  padding: 20px;
+  max-width: 800px;
+  /* margin: auto; */
+  background-color: #f9f9f9;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  position: relative;
+  left: 150px;
+  top: 150px;
+}
+
+/* Styling for the contact list to limit height and enable scroll */
+/* .no-contacts-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 80vh;
+  font-size: 20px;
+  color: #555;
+}
+
+.no-contacts-message button {
+  margin-top: 20px;
+} */
+
+.no-contacts-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  /* Centralize vertically */
+  font-size: 20px;
+  color: #333;
+  background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  /* Soft shadow */
+  margin: 80px 15px;
+}
+
+.no-contacts-message .title {
+  font-size: 26px;
+  margin-bottom: 15px;
+  color: #007bff;
+  /* Attractive color */
+}
+
+.no-contacts-message .description {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* .no-contacts-message button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.no-contacts-message button:hover {
+  background-color: #0056b3;
+} */
+
+.no-contacts-message svg {
+  font-size: 60px;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+
+
+.contact-list {
+  max-height: 300px;
+  /* Limit to show only 5 contacts (adjust height as needed) */
+  overflow: hidden;
+  padding-right: 10px;
+  margin: 20px 0;
+}
+
+.arrow-container {
+  display: flex;
+  justify-content: center;
+}
+
+.angle.up.icon,
+.angle.down.icon {
+  font-size: 24px;
+  color: #333;
+}
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.button-section {
+  display: flex;
+  gap: 15px;
+}
+
+.ui.celled.list .item {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.ui.celled.list .item:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.02);
+}
+
+.ui.celled.list .content {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.ui.celled.list .extra {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Add a slight shadow to each card */
+.ui.celled.list .item {
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+/* Make sure the list looks clean */
+.ui.celled.list {
+  padding: 0;
+}
+
+.form-contact {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Modal content */
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  position: relative;
+  animation: slideDown 0.5s ease;
+  /* Slide down animation */
+}
+
+/* Close button */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Slide-down animation for the modal */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Styles for the ContactDetail component */
+.contact-detail-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+}
+
+.contact-card {
+  width: 350px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-card .image img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin: 20px auto;
+  display: block;
+}
+
+.contact-card .content {
+  text-align: center;
+}
+
+.contact-card .header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.contact-card .description {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.back-button {
+  margin-top: 20px;
+}
+
+/* Responsive design for small screens */
+@media (max-width: 480px) {
+  .contact-card {
+    width: 90%;
+  }
+
+  .contact-card .image img {
+    width: 120px;
+    height: 120px;
+  }
+}
